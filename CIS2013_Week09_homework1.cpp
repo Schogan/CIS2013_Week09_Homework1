@@ -8,6 +8,8 @@ int char_val (char x);
 char char_sel (int x);
 int otp_val (char y);
 char otp_sel (int y);
+int oval;
+char osel;
 
 int main(){
 	string user_msg;
@@ -18,9 +20,11 @@ int main(){
 	int math = 0;
 	char letters;
 	
+
 	
-	while (keep_running){
-		cout << "Please select a file to use either padA or padB" << endl;
+	
+	
+		cout << "Please select a file to use either padA.txt or padB.txt" << endl;
 		cin >> pad_select;
 		
 		otp.open(pad_select);
@@ -29,8 +33,8 @@ int main(){
 			cout << "Something really awful happened here with your selection!" << endl;
 			cout << "Choose another file!"<< endl;
 		}
-		else
-			keep_running = false;
+		//else
+			//keep_running = false;
 		
 		//cout << "Please enter a message." << endl;
 		//cin >> user_msg;
@@ -43,15 +47,15 @@ int main(){
 				cout << "Please enter a message to encrypt: " << endl;
 				cin >> user_msg;
 				//for (int y = 0; y < otp.length(); y++){
-					while (otp >> char y){
-						otp_val(char y);
+					//while (otp >> letters){
+						
+						//otp_val(letters);			+ oval) % 27)
 				
 					for (int x = 0; x < user_msg.length(); x++) {
-				
-					math = ((char_val(user_msg[x]) + ) % 27);
-					cout << char_sel(math);
+						math = (char_val(x)) ;
+					//cout << char_sel(math);
 					}
-				}
+				//}
 
 			cout << " is your encrypted message." << endl;
 			}
@@ -61,7 +65,7 @@ int main(){
 				cin >> user_msg;
 				
 			}
-	}
+	
 	
 }
 
